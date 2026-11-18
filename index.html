@@ -4,149 +4,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Little Surprise for You 🎀</title>
+<title>Happy Birthday Sandhyaa ❤️</title>
 
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;
- font-family:Georgia,serif;
- color:white;
- text-align:center;
- background:linear-gradient(135deg,#240018,#720c46,#d63384);
- min-height:100vh;
- overflow-x:hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container{
- max-width:550px;
- margin:35px auto;
- padding:25px;
- width:92%;
- border:1px solid #ffffff55;
- border-radius:25px;
- background:#ffffff17;
- box-shadow:0 0 35px #ff8fca55;
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #160d1c, #35152b, #160d1c);
+    color: white;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
 }
-h1{color:#ffd4e9;font-size:38px}
-h2{color:#ffe2ef}
-p{line-height:1.8;font-family:Arial,sans-serif}
-.photo{
- width:210px;
- height:250px;
- object-fit:cover;
- border-radius:110px 110px 25px 25px;
- border:4px solid #ffd4e9;
- box-shadow:0 0 25px #ff9bcf;
- margin:20px auto;
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    padding: 35px 22px;
+    border: 1px solid #bd829b;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 0 35px rgba(230,120,170,0.12);
 }
-button{
- background:#ffd4e9;
- color:#720c46;
- border:0;
- padding:14px 25px;
- border-radius:30px;
- font-size:16px;
- font-weight:bold;
- cursor:pointer;
- margin:12px;
+
+.small {
+    color: #e8b5cb;
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 25px;
 }
-button:hover{transform:scale(1.05)}
-#letter{
- display:none;
- background:#ffffff18;
- border-radius:20px;
- padding:20px;
- margin-top:20px;
+
+h1 {
+    font-size: 34px;
+    line-height: 1.4;
+    color: #ffe1ed;
+    margin-bottom: 18px;
 }
-.heart{
- position:fixed;
- bottom:-30px;
- animation:float 8s linear infinite;
- pointer-events:none;
+
+p {
+    color: #ead8e1;
+    line-height: 1.8;
+    font-size: 16px;
 }
-@keyframes float{
- to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+
+button {
+    margin-top: 30px;
+    padding: 14px 27px;
+    border: none;
+    border-radius: 30px;
+    background: #e9a9c4;
+    color: #291321;
+    font-size: 15px;
+    cursor: pointer;
 }
-.cake{font-size:75px;margin:15px}
+
+button:hover {
+    background: #ffd4e5;
+}
+
+#surprise {
+    display: none;
+    animation: appear 1.2s ease;
+}
+
+.heart {
+    color: #f4a8c6;
+    font-size: 30px;
+    margin: 18px 0;
+}
+
+.message {
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid #bd829b;
+}
+
+.signature {
+    margin-top: 28px;
+    color: #f2b8d0;
+    font-style: italic;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="container" id="opening">
+    <div class="small">A LITTLE SURPRISE FOR YOU</div>
 
-<p>✨ A LITTLE SURPRISE FOR YOU ✨</p>
+    <h1>Someone Special<br>Deserves Something Special...</h1>
 
-<h1>Happy Birthday<br>Sandhyaa ❤️</h1>
+    <p>Aaj ka din aapke naam. ❤️</p>
 
-<div class="cake">🎂</div>
-
-<p>
-Today is not just another day...
-It's the day someone very special came into this world. 💗
-</p>
-
-<!-- PHOTO -->
-<img class="photo" src="sandhyaa.jpg"
-alt="Sandhyaa's beautiful photo">
-
-<h2>Dear Sandhyaa 🌹</h2>
-
-<p>
-May your smile always shine brighter than the stars.
-May every dream of yours come true.
-You deserve all the happiness in this world.
-</p>
-
-<button onclick="showLetter()">
-Open Your Special Letter 💌
-</button>
-
-<div id="letter">
-<h2>A Little Message For You ❤️</h2>
-
-<p>
-Some people make life more beautiful
-just by being a part of it.
-
-You are one of those special people.
-
-I hope your birthday brings endless smiles,
-beautiful memories and countless reasons
-to be happy.
-
-Keep smiling, keep shining
-and always be happy.
-
-</p>
-
-<h2>Happy Birthday, Sandhyaa! 🎀</h2>
-<p>With lots of warm wishes ❤️</p>
+    <button onclick="openSurprise()">
+        Open Your Surprise ❤️
+    </button>
 </div>
 
-<p>Made with love 💗</p>
+<div class="container" id="surprise">
+
+    <div class="small">A DAY MADE FOR YOU</div>
+
+    <h1>Happy Birthday<br>Sandhyaa ❤️</h1>
+
+    <div class="heart">♡</div>
+
+    <p>
+        Kuch log zindagi mein aate hain aur
+        apni ek alag jagah bana lete hain.
+        Aap bhi unhi khaas logon mein se ek hain.
+    </p>
+
+    <div class="message">
+        <p>
+            Aapki zindagi hamesha khushiyon, sukoon
+            aur khoobsurat lamhon se bhari rahe.
+            Aapke har sapne ko ek nayi udaan mile
+            aur aapki muskurahat hamesha yunhi bani rahe.
+        </p>
+
+        <br>
+
+        <p>
+            May your new year of life bring endless
+            happiness, beautiful memories and
+            everything your heart wishes for.
+        </p>
+    </div>
+
+    <div class="signature">
+        With best wishes, ❤️
+    </div>
 
 </div>
 
 <script>
-function showLetter(){
- document.getElementById("letter").style.display="block";
+function openSurprise() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("surprise").style.display = "block";
 }
-
-const symbols=["❤️","💗","💕","🌸","✨"];
-
-setInterval(()=>{
- const heart=document.createElement("div");
- heart.className="heart";
- heart.innerHTML=symbols[
- Math.floor(Math.random()*symbols.length)
- ];
- heart.style.left=Math.random()*100+"vw";
- heart.style.fontSize=(15+Math.random()*25)+"px";
- heart.style.animationDuration=(5+Math.random()*5)+"s";
- document.body.appendChild(heart);
- setTimeout(()=>heart.remove(),10000);
-},500);
 </script>
 
 </body>
