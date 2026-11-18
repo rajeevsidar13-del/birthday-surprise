@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Surprise for You 🎀</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Georgia,serif;
+ color:white;
+ text-align:center;
+ background:linear-gradient(135deg,#240018,#720c46,#d63384);
+ min-height:100vh;
+ overflow-x:hidden;
+}
+.container{
+ max-width:550px;
+ margin:35px auto;
+ padding:25px;
+ width:92%;
+ border:1px solid #ffffff55;
+ border-radius:25px;
+ background:#ffffff17;
+ box-shadow:0 0 35px #ff8fca55;
+}
+h1{color:#ffd4e9;font-size:38px}
+h2{color:#ffe2ef}
+p{line-height:1.8;font-family:Arial,sans-serif}
+.photo{
+ width:210px;
+ height:250px;
+ object-fit:cover;
+ border-radius:110px 110px 25px 25px;
+ border:4px solid #ffd4e9;
+ box-shadow:0 0 25px #ff9bcf;
+ margin:20px auto;
+}
+button{
+ background:#ffd4e9;
+ color:#720c46;
+ border:0;
+ padding:14px 25px;
+ border-radius:30px;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ margin:12px;
+}
+button:hover{transform:scale(1.05)}
+#letter{
+ display:none;
+ background:#ffffff18;
+ border-radius:20px;
+ padding:20px;
+ margin-top:20px;
+}
+.heart{
+ position:fixed;
+ bottom:-30px;
+ animation:float 8s linear infinite;
+ pointer-events:none;
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+.cake{font-size:75px;margin:15px}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<p>✨ A LITTLE SURPRISE FOR YOU ✨</p>
+
+<h1>Happy Birthday<br>Sandhyaa ❤️</h1>
+
+<div class="cake">🎂</div>
+
+<p>
+Today is not just another day...
+It's the day someone very special came into this world. 💗
+</p>
+
+<!-- PHOTO -->
+<img class="photo" src="sandhyaa.jpg"
+alt="Sandhyaa's beautiful photo">
+
+<h2>Dear Sandhyaa 🌹</h2>
+
+<p>
+May your smile always shine brighter than the stars.
+May every dream of yours come true.
+You deserve all the happiness in this world.
+</p>
+
+<button onclick="showLetter()">
+Open Your Special Letter 💌
+</button>
+
+<div id="letter">
+<h2>A Little Message For You ❤️</h2>
+
+<p>
+Some people make life more beautiful
+just by being a part of it.
+
+You are one of those special people.
+
+I hope your birthday brings endless smiles,
+beautiful memories and countless reasons
+to be happy.
+
+Keep smiling, keep shining
+and always be happy.
+
+</p>
+
+<h2>Happy Birthday, Sandhyaa! 🎀</h2>
+<p>With lots of warm wishes ❤️</p>
+</div>
+
+<p>Made with love 💗</p>
+
+</div>
+
+<script>
+function showLetter(){
+ document.getElementById("letter").style.display="block";
+}
+
+const symbols=["❤️","💗","💕","🌸","✨"];
+
+setInterval(()=>{
+ const heart=document.createElement("div");
+ heart.className="heart";
+ heart.innerHTML=symbols[
+ Math.floor(Math.random()*symbols.length)
+ ];
+ heart.style.left=Math.random()*100+"vw";
+ heart.style.fontSize=(15+Math.random()*25)+"px";
+ heart.style.animationDuration=(5+Math.random()*5)+"s";
+ document.body.appendChild(heart);
+ setTimeout(()=>heart.remove(),10000);
+},500);
+</script>
+
+</body>
+</html>
